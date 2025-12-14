@@ -1,0 +1,26 @@
+.row {
+  margin: 40px 0;
+}
+
+.row h3 {
+  margin-left: 60px;
+  color: white;
+}
+
+.row-products {
+  display: flex;
+  gap: 15px;
+  padding: 20px 60px;
+  overflow-x: auto;
+}
+
+.row-products img {
+  height: 180px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.row-products img:hover {
+  transform: scale(1.1);
+}

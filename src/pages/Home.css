@@ -1,0 +1,148 @@
+.home {
+  background: #020617;
+  color: white;
+}
+
+/* HERO */
+.hero-text {
+  font-size: 22px;          /* 🔥 BIG TEXT */
+  line-height: 1.8;
+  color: #e5e7eb;
+  max-width: 680px;
+  margin-bottom: 35px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* EVEN BETTER ON LARGE SCREENS */
+@media (min-width: 1024px) {
+  .hero-text {
+    font-size: 24px;
+  }
+}
+
+.hero {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(2, 6, 23, 0.95),
+    rgba(2, 6, 23, 0.6),
+    rgba(2, 6, 23, 0.2)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  padding: 140px 60px;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #d1d5db;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 14px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn.red {
+  background: #facc15;
+  color: black;
+  font-weight: bold;
+}
+
+.btn.dark {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* MAIN GRID */
+.home-content {
+  display: grid;
+  grid-template-columns: 2.6fr 1.4fr;
+  gap: 50px;
+  padding: 70px 60px;
+}
+
+/* LEFT */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+/* RIGHT PANEL */
+.right-section {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 24px;
+  padding: 45px;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+.right-section h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+  color: #facc15;
+}
+
+.right-section p {
+  font-size: 15px;
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.right-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.right-section ul li {
+  margin-bottom: 14px;
+}
+
+/* CTA */
+.cta-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #facc15, #fde047);
+  color: black;
+}

@@ -1,0 +1,225 @@
+/* ================= NAVBAR ================= */
+.net-navbar {
+  position: fixed;
+  top: 0;
+  width: 90%;
+  height: 100px;
+  padding: 0 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.7)
+  );
+
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text {
+  color: #facc15;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ================= MENU ================= */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+  color: white;
+  align-items: center;
+}
+
+.menu li {
+  position: relative;
+  cursor: pointer;
+  padding: 14px 0; /* bigger click area */
+}
+
+/* ================= NAV LINKS ================= */
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: #facc15;
+}
+
+/* ACTIVE PAGE (Home / Shop) */
+.nav-link.active {
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  user-select: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 12px;
+  padding: 12px 0;
+  min-width: 190px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+
+  /* hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: opacity 0.25s ease,
+              transform 0.25s ease,
+              visibility 0.25s ease;
+}
+
+/* SHOW DROPDOWN */
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ================= DROPDOWN ITEMS ================= */
+.dropdown-menu li {
+  padding: 6px 6px;
+  font-size: 14px;
+  color: #d1d5db;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(250, 204, 21, 0.15);
+  color: #facc15;
+}
+
+/* ================= ICONS ================= */
+.icons {
+  display: flex;
+  gap: 25px;
+}
+
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+.icon:hover {
+  color: #facc15;
+}
+/* CART ICON */
+.cart-icon {
+  position: relative;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-icon:hover {
+  color: #facc15;
+}
+
+/* CART COUNT BADGE */
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+
+  background: #facc15;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .net-navbar {
+    padding: 0 20px;
+  }
+
+  .menu {
+    gap: 25px;
+  }
+}
+/* ===== CATEGORY DROPDOWN LINKS ===== */
+
+/* dropdown container */
+.dropdown-menu {
+  background: #000;
+  border-radius: 12px;
+  padding: 10px 0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* category links default */
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+/* hover effect (yellow highlight) */
+.dropdown-menu a:hover {
+  background: #ffd400;
+  color: #000;
+}
+
+/* ACTIVE category (NavLink adds .active automatically) */
+.dropdown-menu a.active {
+  background: #ffd400;
+  color: #000;
+  font-weight: bold;
+}
+
+
+.dropdown-menu li {
+  list-style: none;
+  position: relative;
+}
+
+.dropdown-menu li::before {
+  content: "•";
+  color: #ffd400;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+

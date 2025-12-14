@@ -1,0 +1,44 @@
+/* ================= SHOP PAGE ================= */
+.shop-page {
+  padding: 140px 80px 60px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #111 0%, #000 60%);
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* ================= PRODUCT GRID ================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+.show-more-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.show-more-btn {
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffcc00, #ffb700);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.show-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
